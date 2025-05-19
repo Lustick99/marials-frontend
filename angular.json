@@ -35,6 +35,14 @@
                 "glob": "**/*",
                 "input": "projects/main/src/assets",
                 "output": "/assets"
+              },
+              {
+                "glob": "**/*",
+                "input": "src",
+                "output": "./",
+                "ignore": [
+                  "**/*.ts"
+                ]
               }
             ],
             "styles": [
@@ -105,6 +113,14 @@
                 "glob": "**/*",
                 "input": "projects/main/src/assets",
                 "output": "/assets"
+              },
+              {
+                "glob": "**/*",
+                "input": "src",
+                "output": "./",
+                "ignore": [
+                  "**/*.ts"
+                ]
               }
             ],
             "styles": [
