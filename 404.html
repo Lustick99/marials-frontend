@@ -1,16 +1,17 @@
-<!-- 404.html -->
 <!DOCTYPE html>
-<html>
-  <head>
-    <meta charset="utf-8">
-    <title>Redirection…</title>
-    <meta http-equiv="refresh" content="0; url=./index.html">
-    <script>
-      // Pour supporter les routes Angular
-      window.location.href = window.location.origin + "/main/index.html";
-    </script>
-  </head>
-  <body>
-    <p>Redirection…</p>
-  </body>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8" />
+  <meta http-equiv="refresh" content="0; url=index.html" />
+  <script>
+    window.location.replace('index.html' + window.location.search + window.location.hash);
+  </script>
+  <title>Redirection...</title>
+</head>
+
+<body>
+  <p>Redirection...</p>
+</body>
+
 </html>
