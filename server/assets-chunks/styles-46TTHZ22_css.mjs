@@ -1,0 +1,2 @@
+export default `html{scroll-behavior:smooth}body{margin:0;padding:0;box-sizing:border-box;font-family:Sora,sans-serif!important;font-optical-sizing:auto;font-style:normal}
+`;
