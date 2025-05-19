@@ -1,0 +1,8 @@
+{
+  "routes": {
+    "/marials-frontend/a-propos": {},
+    "/marials-frontend/contact": {},
+    "/marials-frontend/home": {},
+    "/marials-frontend/test": {}
+  }
+}
