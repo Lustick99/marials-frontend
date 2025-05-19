@@ -1,0 +1,65 @@
+.card {
+    position: relative;
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-end;
+    border-radius: 10px;
+    padding: 1.5rem;
+    color: #fff;
+    text-shadow: #222 0px 1px 2px;
+    text-decoration: none;
+    background-size: cover;
+    background-position: center;
+    box-shadow: 0 8px 16px rgba(0, 116, 204, 0.15);
+    overflow: hidden;
+    transition: color 0.3s ease;
+    min-height: 250px;
+    max-height: 400px;
+
+    .overlay {
+        content: "";
+        position: absolute;
+        inset: 0;
+        background-color: rgba(0, 0, 0, 0.4);
+        transition: background-color 0.3s ease;
+        z-index: 0;
+        border-radius: 10px;
+    }
+
+    .content {
+        position: relative;
+        z-index: 1;
+    }
+
+    &:hover {
+        color: #fafafa;
+
+        .overlay {
+            background-color: rgba(0, 0, 0, 0.75); // rideau noir léger au hover
+        }
+
+        transform: translateY(-8px);
+        box-shadow: 0 12px 24px rgba(0, 116, 204, 0.3);
+
+        .arrow {
+            margin-left: 8px;
+        }
+    }
+
+    h3 {
+        font-size: 1.3rem;
+        margin-bottom: 0.7rem;
+        font-weight: 700;
+    }
+
+    p {
+        font-size: 1rem;
+        margin-bottom: 1rem;
+    }
+
+    .arrow {
+        font-size: 1.5rem;
+        transition: margin-left 0.3s;
+        display: inline-block;
+    }
+}

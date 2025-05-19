@@ -1,0 +1,10 @@
+<section class="partners-carousel">
+    <h2>Nos partenaires</h2>
+    <div class="carousel-track">
+        <div class="carousel-slide" *ngFor="let repeat of [1, 2]">
+            <div class="partner" *ngFor="let partner of partners">
+                <img [src]="partner.logoUrl" [alt]="partner.name" />
+            </div>
+        </div>
+    </div>
+</section>

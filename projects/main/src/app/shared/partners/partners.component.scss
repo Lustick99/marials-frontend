@@ -1,0 +1,29 @@
+.partners {
+    text-align: center;
+    margin-top: 4rem;
+
+    h2 {
+        font-size: 2rem;
+        color: #0077b6;
+        margin-bottom: 2rem;
+    }
+
+    .partners__grid {
+        display: grid;
+        grid-template-columns: repeat(auto-fit, minmax(120px, 1fr));
+        gap: 1.5rem;
+        align-items: center;
+    }
+
+    .partner img {
+        max-width: 100%;
+        max-height: 60px;
+        object-fit: contain;
+        filter: grayscale(100%);
+        transition: filter 0.3s;
+    }
+
+    .partner img:hover {
+        filter: none;
+    }
+}

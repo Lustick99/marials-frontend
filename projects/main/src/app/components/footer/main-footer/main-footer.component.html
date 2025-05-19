@@ -1,0 +1,47 @@
+<footer class="footer">
+    <div class="container">
+        <div class="footer__top">
+            <div class="footer__logo">
+                <img src="assets/logo.png" alt="Marials Group" />
+                <p>Solutions globales à portée locale.</p>
+            </div>
+
+            <div class="footer__links">
+                <div>
+                    <h4>Navigation</h4>
+                    <ul>
+                        <li><a routerLink="/">Accueil</a></li>
+                        <li><a routerLink="/a-propos">À propos</a></li>
+                        <li><a [routerLink]="['/home']" fragment="axes">Nos Axes</a></li>
+                        <li><a routerLink="/contact">Contact</a></li>
+                    </ul>
+                </div>
+
+                <div>
+                    <h4>Nos Axes</h4>
+                    <ul>
+                        <li><a routerLink="/axes/maritime">Maritime & Shipchandling</a></li>
+                        <li><a routerLink="/axes/marketing">Marketing & Communication</a></li>
+                        <li><a routerLink="/axes/immobilier">Immobilier & Construction</a></li>
+                        <li><a routerLink="/axes/recrutement">Agence de Recrutement</a></li>
+                        <li><a routerLink="/axes/services">Prestation de Services</a></li>
+                        <li><a routerLink="/axes/visa">Assistance Visa</a></li>
+                    </ul>
+                </div>
+
+                <div>
+                    <h4>Contact</h4>
+                    <ul>
+                        <li><a href="mailto:contact@marials.com">contact&#64;marials.com</a></li>
+                        <li><a href="tel:+22812345678">+228 12 34 56 78</a></li>
+                        <li><a>Adresse : Lomé, Golf 5</a></li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+
+        <div class="footer__bottom">
+            <p>&copy; {{ currentYear }} Marials Group. Tous droits réservés.</p>
+        </div>
+    </div>
+</footer>

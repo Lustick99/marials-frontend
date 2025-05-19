@@ -1,0 +1,8 @@
+<section class="stats">
+    <div class="stats__grid">
+        <div *ngFor="let stat of stats" class="stat">
+            <h3 class="value" #counter>0{{ stat.suffix || '' }}</h3>
+            <p class="label">{{ stat.label }}</p>
+        </div>
+    </div>
+</section>

@@ -1,0 +1,55 @@
+<section class="hero">
+    <div class="hero__content">
+        <h1><span>Marials Group</span> ? </h1>
+        <p>Innovation, Excellence et Engagement Multisectoriel.</p>
+        <a href="#histoire" class="btn btn-primary"> Voir + </a>
+    </div>
+</section>
+
+<div id="histoire">
+    <app-section title="Notre histoire">
+        <ng-template #left>
+            <img src="assets/images/about1.jpg" alt="Notre histoire" class="img-fluid rounded" />
+        </ng-template>
+        <ng-template #right>
+            <h2>Une vision tournée vers l’avenir</h2>
+            <p>Depuis sa création, Marials Group a pour ambition de catalyser le développement à travers ses six pôles
+                stratégiques. Notre engagement se traduit par des solutions concrètes, durables et adaptées.</p>
+        </ng-template>
+    </app-section>
+
+    <app-section title="Nos engagements">
+        <ng-template #left>
+            <h2>Un engagement envers l’excellence</h2>
+            <p>Nous nous engageons à offrir des services de qualité supérieure, en mettant l’accent sur l’innovation et
+                la
+                satisfaction client. Notre équipe est dédiée à la réussite de chaque projet.</p>
+        </ng-template>
+        <ng-template #right>
+            <img src="assets/images/about2.jpg" alt="Nos engagements" class="img-fluid rounded" />
+        </ng-template>
+    </app-section>
+
+    <app-section title="Nos valeurs" [reverse]="true">
+        <ng-template #right>
+            <div class="card-container">
+                <app-card *ngFor="let valeur of valeurs" [title]="valeur.title" [description]="valeur.description"
+                    [icon]="valeur.icon" [imageUrl]="valeur.image"></app-card>
+            </div>
+        </ng-template>
+    </app-section>
+
+    <app-section title="Nos partenaires">
+        <ng-template #left>
+            <h2>Des partenariats solides</h2>
+            <p>Nous collaborons avec des leaders de l’industrie pour offrir des solutions innovantes et adaptées aux
+                besoins
+                de nos clients. Ensemble, nous construisons un avenir meilleur.</p>
+        </ng-template>
+        <ng-template #right>
+            <app-partners-carousel></app-partners-carousel>
+        </ng-template>
+    </app-section>
+
+    <app-stats [stats]="stats"></app-stats>
+</div>

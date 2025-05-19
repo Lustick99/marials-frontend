@@ -1,0 +1,15 @@
+<!-- <section class="hero" [ngStyle]="{
+    '--parallax-offset': parallaxOffset + 'px',
+    'background-image': 'url(' + currentBackground + ')'
+  }"> -->
+<section class="hero" [ngStyle]="{
+    'background-image': 'url(' + currentBackground + ')'
+  }">
+    <div class="overlay"></div>
+    <div class="content">
+        <h1>{{ title }}</h1>
+        <!-- <p>{{ currentSubtitle }}</p> -->
+        <p class="typing-text">{{ typingText }}</p>
+        <a [routerLink]="ctaLink" class="cta">{{ ctaText }}</a>
+    </div>
+</section>

@@ -1,0 +1,8 @@
+<section class="partners">
+    <h2>Nos partenaires</h2>
+    <div class="partners__grid">
+        <div *ngFor="let partner of partners" class="partner">
+            <img [src]="partner.logoUrl" [alt]="partner.name" />
+        </div>
+    </div>
+</section>

@@ -1,0 +1,72 @@
+<app-hero [title]="'Découvrez Marials Group'" [subtitles]="[
+    'Solutions globales à portée locale',
+    'Renforcez votre stratégie avec Marials Group',
+    'Une expertise multisectorielle au service de votre avenir',
+    'Innovation, engagement, excellence',
+    'Découvrez nos domaines d’expertise...',
+    'Faites confiance à notre savoir-faire',
+  ]" [backgroundImages]="[
+    'assets/images/axes/axe-1.jpg',
+    'assets/images/about3.jpg',
+    'assets/images/axes/axe-3.jpg',
+    'assets/images/axes/axe-4.jpg',
+    'assets/images/axes/axe-5.jpg',
+    'assets/images/axes/axe-6.jpg'
+  ]" [ctaText]="'Explorer nos domaines'" [ctaLink]="'/axes'">
+</app-hero>
+
+
+<!-- <section class="hero">
+    <div class="hero__content">
+        <h1>Bienvenue chez <span>Marials Group</span></h1>
+        <p>Solutions globales à portée locale, pour tous vos besoins.</p>
+        <a routerLink="/contact" class="btn btn-primary">Contactez-nous</a>
+    </div>
+</section> -->
+<!-- <section class="intro">
+    <h2>Qui sommes-nous ?</h2>
+    <p>
+        Marials est une société pluridisciplinaire offrant des solutions dans six grands domaines.
+        Notre mission : vous accompagner efficacement grâce à notre expertise locale et globale.
+    </p>
+</section> -->
+<!-- <section class="poles">
+    <h2>Nos grands axes</h2>
+    <div class="poles__grid">
+        <a *ngFor="let pole of poles; let i = index" [href]="pole.url" target="_blank" class="pole-card"
+            [style.backgroundImage]="'url(' + getImageUrl(i) + ')'" [attr.aria-label]="pole.title">
+            <div class="overlay"></div>
+            <div class="content">
+                <h3>{{ pole.title }}</h3>
+                <p>{{ pole.desc }}</p>
+                <span class="arrow">→</span>
+            </div>
+        </a>
+
+    </div>
+</section> -->
+
+<div class="content">
+    <app-about-preview></app-about-preview>
+
+    <app-section title="Nos grands axes" id="axes">
+        <ng-template #center>
+            <div class="poles__grid">
+                <app-card *ngFor="let pole of poles; let i = index" [title]="pole.title" [description]="pole.desc"
+                    [imageUrl]="getImageUrl(i)" [link]="pole.url"></app-card>
+            </div>
+        </ng-template>
+
+    </app-section>
+
+    <app-call-to-action text="Vous souhaitez en savoir plus sur nos pôles ou discuter d’un projet ?"
+        buttonText="Contactez-nous" buttonLink="/contact">
+    </app-call-to-action>
+
+    <app-partners-carousel [partners]="partners"></app-partners-carousel>
+
+    <app-stats [stats]="stats"></app-stats>
+
+    <app-call-to-action text="Prêt à collaborer avec nous ?" buttonText="Demandez un devis" buttonLink="/contact">
+    </app-call-to-action>
+</div>

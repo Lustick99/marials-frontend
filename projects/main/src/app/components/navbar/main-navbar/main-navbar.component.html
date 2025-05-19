@@ -1,0 +1,33 @@
+<nav class="navbar">
+    <div class="container">
+        <a routerLink="/" class="logo">
+            <img src="assets/logo.png" alt="Marials Logo" />
+        </a>
+
+        <ul class="nav-links" [class.open]="isMenuOpen">
+            <li><a routerLink="/home" routerLinkActive="active" (click)="closeMenu()">Accueil</a></li>
+            <li><a routerLink="/a-propos" routerLinkActive="active" (click)="closeMenu()">À propos</a></li>
+
+            <!-- Dropdown AXES -->
+            <li class="dropdown" [class.open]="isAxesOpen" (mouseenter)="onHover(true)" (mouseleave)="onHover(false)">
+                <a href="#" (click)="toggleAxes($event)">Axes <span class="arrow">▼</span></a>
+                <ul class="dropdown-menu">
+                    <li><a routerLink="/axes/maritime" (click)="closeAll()">Maritime & Shipchandling</a></li>
+                    <li><a routerLink="/axes/marketing" (click)="closeAll()">Marketing & Communication</a></li>
+                    <li><a routerLink="/axes/immobilier" (click)="closeAll()">Immobilier & Construction</a></li>
+                    <li><a routerLink="/axes/recrutement" (click)="closeAll()">Agence de Recrutement</a></li>
+                    <li><a routerLink="/axes/services" (click)="closeAll()">Prestation de Services</a></li>
+                    <li><a routerLink="/axes/visa" (click)="closeAll()">Assistance Visa</a></li>
+                </ul>
+            </li>
+
+            <li><a routerLink="/contact" routerLinkActive="active" (click)="closeMenu()">Contact</a></li>
+        </ul>
+
+        <div class="burger" (click)="toggleMenu()">
+            <span [class.open]="isMenuOpen"></span>
+            <span [class.open]="isMenuOpen"></span>
+            <span [class.open]="isMenuOpen"></span>
+        </div>
+    </div>
+</nav>

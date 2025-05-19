@@ -1,0 +1,26 @@
+.stats {
+    margin-top: 4rem;
+    background: #f1f1f1;
+    padding: 2rem;
+
+    .stats__grid {
+        display: grid;
+        grid-template-columns: repeat(auto-fit, minmax(160px, 1fr));
+        gap: 2rem;
+        text-align: center;
+    }
+
+    .stat {
+        .value {
+            font-size: 2rem;
+            color: #0077b6;
+            font-weight: bold;
+            margin-bottom: 0.5rem;
+        }
+
+        .label {
+            font-size: 1rem;
+            color: #333;
+        }
+    }
+}

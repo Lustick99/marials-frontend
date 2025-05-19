@@ -1,0 +1,28 @@
+.info-card {
+    display: flex;
+    gap: 1rem;
+    align-items: center;
+    background: rgba(255, 255, 255, 0.02);
+    padding: 1rem;
+    border-radius: 1rem;
+    backdrop-filter: blur(8px);
+    box-shadow: 0 0 15px rgba(0, 255, 255, 0.1);
+
+    .icon {
+        font-size: 2rem;
+        color: #0ff;
+    }
+
+    .text {
+        h4 {
+            margin: 0;
+            font-weight: 600;
+            color: white;
+        }
+
+        p {
+            margin: 0;
+            color: #ccc;
+        }
+    }
+}

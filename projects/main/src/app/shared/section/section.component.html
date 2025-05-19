@@ -1,0 +1,20 @@
+<section class="section">
+    <div class="section__header" *ngIf="title">
+        <h2>{{ title }}</h2>
+    </div>
+
+    <!-- Mode center -->
+    <div class="section__center" *ngIf="centerTemplate">
+        <ng-container *ngTemplateOutlet="centerTemplate"></ng-container>
+    </div>
+
+    <!-- Mode left/right -->
+    <div class="section__content" [ngClass]="{ reverse: reverse }">
+        <div class="section__left" *ngIf="leftTemplate">
+            <ng-container *ngTemplateOutlet="leftTemplate"></ng-container>
+        </div>
+        <div class="section__right" *ngIf="rightTemplate">
+            <ng-container *ngTemplateOutlet="rightTemplate"></ng-container>
+        </div>
+    </div>
+</section>

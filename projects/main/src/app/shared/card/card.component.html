@@ -1,0 +1,11 @@
+<a [href]="link" target="_blank" class="card" [style.backgroundImage]="'url(' + imageUrl + ')'">
+    <div class="overlay"></div>
+    <div class="content">
+        <h3>
+            <i *ngIf="icon" class="icon" [ngClass]="icon"></i>
+            {{ title }}
+        </h3>
+        <p>{{ description }}</p>
+        <span class="arrow">→</span>
+    </div>
+</a>

@@ -1,0 +1,22 @@
+<section class="contact-hero">
+    <h1>Contactez <span>Marials Group</span></h1>
+    <p>Nous sommes à votre écoute pour toute demande, collaboration ou information.</p>
+</section>
+
+<section class="contact-section">
+    <div class="contact-grid">
+        <div class="contact-info">
+            <app-contact-info-card *ngFor="let info of contactInfos" [icon]="info.icon" [title]="info.title"
+                [content]="info.content">
+            </app-contact-info-card>
+        </div>
+
+        <div class="contact-form">
+            <app-contact-form></app-contact-form>
+        </div>
+    </div>
+</section>
+
+<section class="contact-map">
+    <app-map></app-map>
+</section>

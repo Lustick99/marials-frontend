@@ -1,0 +1,209 @@
+:host {
+    display: block;
+    // padding: 2rem 1rem;
+    // max-width: 1200px;
+    margin: 0 auto;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    color: #222;
+    scroll-snap-type: y mandatory;
+}
+
+section {
+    scroll-snap-align: start;
+    height: 100vh;
+}
+
+
+.content {
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 2rem 1rem;
+}
+
+.hero {
+    background: linear-gradient(135deg, #0077b6 0%, #00b4d8 100%);
+    color: #fff;
+    text-align: center;
+    padding: 4rem 1rem;
+    border-radius: 10px;
+    margin-bottom: 3rem;
+
+    &__content {
+        max-width: 800px;
+        margin: 0 auto;
+
+        h1 {
+            font-size: 2.8rem;
+            margin-bottom: 1rem;
+
+            span {
+                font-weight: 900;
+                color: #caf0f8;
+            }
+        }
+
+        p {
+            font-size: 1.2rem;
+            margin-bottom: 2rem;
+        }
+
+        .btn-primary {
+            background-color: #00b4d8;
+            color: white;
+            padding: 0.75rem 1.5rem;
+            border-radius: 30px;
+            font-weight: 600;
+            text-decoration: none;
+            transition: background-color 0.3s;
+
+            &:hover {
+                background-color: #0077b6;
+            }
+        }
+    }
+}
+
+.intro {
+    text-align: center;
+    margin-bottom: 3rem;
+
+    h2 {
+        font-size: 2rem;
+        margin-bottom: 1rem;
+        color: #0077b6;
+    }
+
+    p {
+        font-size: 1.1rem;
+        max-width: 700px;
+        margin: 0 auto;
+    }
+}
+
+// .poles {
+//     h2 {
+//         font-size: 2rem;
+//         margin-bottom: 2rem;
+//         text-align: center;
+//         color: #0077b6; // bleu maritime
+//     }
+
+//     &__grid {
+//         display: grid;
+//         gap: 1.5rem;
+//         grid-template-columns: repeat(3, 1fr);
+
+//         @media (max-width: 900px) {
+//             grid-template-columns: repeat(2, 1fr);
+//         }
+
+//         @media (max-width: 600px) {
+//             grid-template-columns: 1fr;
+//         }
+//     }
+
+//     .pole-card {
+//         position: relative;
+//         display: flex;
+//         flex-direction: column;
+//         justify-content: flex-end;
+//         border-radius: 10px;
+//         padding: 1.5rem;
+//         color: #fff;
+//         text-shadow: #222 0px 1px 2px;
+//         text-decoration: none;
+//         background-size: cover;
+//         background-position: center;
+//         box-shadow: 0 8px 16px rgba(0, 116, 204, 0.15);
+//         overflow: hidden;
+//         transition: color 0.3s ease;
+
+//         .overlay {
+//             content: "";
+//             position: absolute;
+//             inset: 0;
+//             background-color: rgba(0, 0, 0, 0.4);
+//             transition: background-color 0.3s ease;
+//             z-index: 0;
+//             border-radius: 10px;
+//         }
+
+//         .content {
+//             position: relative;
+//             z-index: 1;
+//         }
+
+//         &:hover {
+//             color: #fafafa;
+
+//             .overlay {
+//                 background-color: rgba(0, 0, 0, 0.75); // rideau noir léger au hover
+//             }
+
+//             transform: translateY(-8px);
+//             box-shadow: 0 12px 24px rgba(0, 116, 204, 0.3);
+
+//             .arrow {
+//                 margin-left: 8px;
+//             }
+//         }
+
+//         h3 {
+//             font-size: 1.3rem;
+//             margin-bottom: 0.7rem;
+//             font-weight: 700;
+//         }
+
+//         p {
+//             font-size: 1rem;
+//             margin-bottom: 1rem;
+//         }
+
+//         .arrow {
+//             font-size: 1.5rem;
+//             transition: margin-left 0.3s;
+//             display: inline-block;
+//         }
+//     }
+// }
+
+// .call-to-action {
+//     text-align: center;
+//     margin-top: 4rem;
+
+//     h2 {
+//         font-size: 2rem;
+//         margin-bottom: 1.5rem;
+//         color: #0077b6;
+//     }
+
+//     .btn-secondary {
+//         background-color: transparent;
+//         border: 2px solid #0077b6;
+//         color: #0077b6;
+//         padding: 0.75rem 1.75rem;
+//         border-radius: 30px;
+//         font-weight: 600;
+//         text-decoration: none;
+//         transition: background-color 0.3s, color 0.3s;
+
+//         &:hover {
+//             background-color: #0077b6;
+//             color: #fff;
+//         }
+//     }
+// }
+
+.poles__grid {
+    display: grid;
+    gap: 1.5rem;
+    grid-template-columns: repeat(2, 1fr);
+
+    @media (max-width: 900px) {
+        grid-template-columns: repeat(2, 1fr);
+    }
+
+    @media (max-width: 600px) {
+        grid-template-columns: 1fr;
+    }
+}
