@@ -1,0 +1,12 @@
+<section class="services-liste">
+    <div class="container">
+        <h2 class="section-title">Nos services maritimes</h2>
+        <div class="cards" @staggeredList>
+            <div class="card" *ngFor="let service of services">
+                <div class="icon">{{ service.icon }}</div>
+                <h3>{{ service.title }}</h3>
+                <p>{{ service.description }}</p>
+            </div>
+        </div>
+    </div>
+</section>

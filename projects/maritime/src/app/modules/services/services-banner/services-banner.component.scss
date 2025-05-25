@@ -1,0 +1,36 @@
+.services-banner {
+    position: relative;
+    height: 80vh;
+    background: url('/assets/images/services.jpg') center/cover no-repeat;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    color: white;
+
+    .overlay {
+        background-color: rgba(0, 0, 0, 0.6);
+        width: 100%;
+        height: 100%;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+
+        .content {
+            text-align: center;
+            max-width: 800px;
+            padding: 2rem;
+
+            h1 {
+                font-size: 3rem;
+                font-weight: bold;
+                text-transform: uppercase;
+                margin-bottom: 1rem;
+            }
+
+            p {
+                font-size: 1.2rem;
+                color: #ddd;
+            }
+        }
+    }
+}

@@ -1,0 +1,61 @@
+.coordonnees-container {
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 4rem 1rem;
+    text-align: center;
+
+    .section-title {
+        font-size: 2rem;
+        margin-bottom: 2rem;
+        color: #003d66;
+    }
+
+    .coordonnees-list {
+        display: flex;
+        flex-wrap: wrap;
+        justify-content: center;
+        gap: 2rem;
+    }
+
+    .coordonnees-item {
+        background: rgba(255, 255, 255, 0.85);
+        backdrop-filter: blur(10px);
+        padding: 2rem;
+        border-radius: 1rem;
+        // box-shadow: 0 8px 20px rgba(0, 0, 0, 0.05);
+        text-align: left;
+        display: flex;
+        align-items: center;
+        flex: 1 1 250px;
+        max-width: 250px;
+        gap: 1.2rem;
+        transition: transform 0.3s ease;
+
+        &:hover {
+            transform: translateY(-5px);
+        }
+
+        lucide-icon {
+            color: #005a99;
+            flex-shrink: 0;
+        }
+
+        .details {
+            flex: 1;
+            text-align: left;
+            width: 100%;
+            
+            h3 {
+                font-size: 1.2rem;
+                margin-bottom: 0.3rem;
+                color: #003d66;
+            }
+
+            p {
+                margin: 0;
+                font-size: 1rem;
+                color: #333;
+            }
+        }
+    }
+}

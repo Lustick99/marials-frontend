@@ -1,0 +1,14 @@
+<section class="services-faq" @fadeIn>
+    <h2>Foire Aux Questions</h2>
+    <div class="faq-list">
+        <div class="faq-item" *ngFor="let faq of faqs; let i = index">
+            <div class="question" (click)="toggle(i)">
+                {{ faq.question }}
+                <span [class.open]="openIndex === i">▼</span>
+            </div>
+            <div class="answer" *ngIf="openIndex === i">
+                {{ faq.answer }}
+            </div>
+        </div>
+    </div>
+</section>

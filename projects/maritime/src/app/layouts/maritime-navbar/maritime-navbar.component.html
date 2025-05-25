@@ -1,0 +1,21 @@
+<nav class="navbar">
+    <div class="container">
+        <a routerLink="/" class="logo">
+            <img src="assets/logo.png" alt="Marials Group" />
+        </a>
+
+        <ul class="nav-links" [class.open]="isMenuOpen">
+            <li><a routerLink="/" (click)="closeMenu()">Accueil</a></li>
+            <li><a routerLink="/services" (click)="closeMenu()">Services</a></li>
+            <li><a routerLink="/equipe" (click)="closeMenu()">Équipe</a></li>
+            <li><a routerLink="/galerie" (click)="closeMenu()">Galerie</a></li>
+            <li><a routerLink="/contact" (click)="closeMenu()">Contact</a></li>
+        </ul>
+
+        <div class="burger" (click)="toggleMenu()">
+            <span [class.open]="isMenuOpen"></span>
+            <span [class.open]="isMenuOpen"></span>
+            <span [class.open]="isMenuOpen"></span>
+        </div>
+    </div>
+</nav>

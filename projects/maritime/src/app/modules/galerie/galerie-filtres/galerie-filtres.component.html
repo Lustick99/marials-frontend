@@ -1,0 +1,9 @@
+<div class="filtre-container" @fadeSlide>
+    <button class="filtre-btn" [class.active]="selected === 'Tous'" (click)="selectCategory('Tous')">
+        Tous
+    </button>
+    <button class="filtre-btn" *ngFor="let cat of categories" [class.active]="selected === cat"
+        (click)="selectCategory(cat)">
+        {{ cat }}
+    </button>
+</div>

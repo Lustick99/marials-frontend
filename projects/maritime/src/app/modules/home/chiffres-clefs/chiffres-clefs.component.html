@@ -1,0 +1,9 @@
+<section class="stats-section" @fadeIn>
+    <h2 class="stats-title">Chiffres Clés</h2>
+    <div class="stats-grid">
+        <div class="stat-card" *ngFor="let stat of stats">
+            <span class="stat-value">{{ stat.value }}+</span>
+            <span class="stat-label">{{ stat.label }}</span>
+        </div>
+    </div>
+</section>

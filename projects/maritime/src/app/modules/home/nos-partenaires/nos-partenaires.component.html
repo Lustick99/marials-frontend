@@ -1,0 +1,8 @@
+<section class="partners-section" @fadeSlide>
+    <h2 class="partners-title">Nos partenaires de confiance</h2>
+    <div class="partners-logos" @staggeredList>
+        <div class="partner" *ngFor="let p of partenaires">
+            <img [src]="p.logo" [alt]="p.name" />
+        </div>
+    </div>
+</section>

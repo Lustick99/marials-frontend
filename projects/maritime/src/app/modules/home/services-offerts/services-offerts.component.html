@@ -1,0 +1,15 @@
+<section class="services-container" @fadeSlide>
+    <h2 class="section-title">Nos services maritimes</h2>
+    <div class="services-list" @staggeredList>
+        <div class="service-card" *ngFor="let service of services">
+            <img [src]="service.icon" [alt]="service.title" />
+            <div class="content">
+                <h3>{{ service.title }}</h3>
+                <p>{{ service.description }}</p>
+            </div>
+        </div>
+    </div>
+    <button class="view-more-btn" @fadeIn>
+        <a [routerLink]="['/services']" rel="noopener noreferrer"> Voir plus </a>
+    </button>
+</section>

@@ -1,0 +1,6 @@
+<app-galerie-banner />
+<app-galerie-intro />
+<app-galerie-filtres [categories]="categories" (filterChange)="setCategoryFilter($event)" />
+<app-galerie-grid [images]="filteredImages" (imageClick)="openLightbox($event)" />
+<app-galerie-lightbox *ngIf="lightboxOpen" [images]="filteredImages" [currentIndex]="selectedIndex"
+    (close)="closeLightbox()" />

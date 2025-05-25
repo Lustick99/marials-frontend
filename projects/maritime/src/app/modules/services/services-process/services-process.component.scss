@@ -1,0 +1,41 @@
+.services-process {
+    padding: 4rem 1rem;
+    background-color: #f6f9fc;
+    text-align: center;
+
+    .section-title {
+        font-size: 2rem;
+        margin-bottom: 2rem;
+        color: #023e8a;
+    }
+
+    .steps {
+        display: flex;
+        flex-wrap: wrap;
+        justify-content: center;
+        gap: 2rem;
+        max-width: 900px;
+        margin: 0 auto;
+
+        .step {
+            background: white;
+            padding: 2rem;
+            border-radius: 1rem;
+            box-shadow: 0 5px 15px rgba(0, 0, 0, 0.05);
+            min-width: 200px;
+            font-weight: 600;
+            color: #0077b6;
+            transition: transform 0.3s ease;
+
+            &:hover {
+                transform: scale(1.05);
+                background: #0077b6;
+                color: white;
+            }
+
+            .step-number {
+                font-size: 1.1rem;
+            }
+        }
+    }
+}

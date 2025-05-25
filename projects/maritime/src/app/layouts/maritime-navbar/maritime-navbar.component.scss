@@ -1,0 +1,108 @@
+.navbar {
+    position: fixed;
+    top: 0;
+    width: 100%;
+    background: rgba(0, 20, 40, 0.8);
+    backdrop-filter: blur(10px);
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.3);
+    z-index: 1000;
+    padding: 0.5rem 0;
+
+    .container {
+        max-width: 1200px;
+        margin: 0 auto;
+        padding: 0 1rem;
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+    }
+
+    .logo {
+        width: 70px;
+        height: 70px;
+        border-radius: 100%;
+        background-color: rgb(255, 255, 255);
+
+        img {
+            height: 50px;
+            padding: 10px 13px;
+            transition: transform 0.3s ease;
+
+            &:hover {
+                transform: scale(1.05);
+            }
+        }
+    }
+
+    .nav-links {
+        display: flex;
+        gap: 2rem;
+        list-style: none;
+
+        li a {
+            color: white;
+            text-decoration: none;
+            font-weight: 600;
+            position: relative;
+            transition: color 0.3s;
+
+            &:hover {
+                color: #00cfff;
+            }
+        }
+
+        &.open {
+            display: flex;
+            flex-direction: column;
+            position: absolute;
+            top: 100%;
+            left: 0;
+            background: rgba(0, 20, 40, 0.95);
+            width: 100%;
+            padding: 1rem;
+            margin: 0;
+        }
+    }
+
+    .burger {
+        display: none;
+        flex-direction: column;
+        gap: 6px;
+        cursor: pointer;
+
+        span {
+            display: block;
+            width: 25px;
+            height: 3px;
+            background: white;
+            border-radius: 2px;
+            transition: all 0.3s ease;
+        }
+
+        span.open:nth-child(1) {
+            transform: rotate(45deg) translateY(12px);
+        }
+
+        span.open:nth-child(2) {
+            opacity: 0;
+        }
+
+        span.open:nth-child(3) {
+            transform: rotate(-45deg) translateY(-11px);
+        }
+    }
+
+    @media (max-width: 768px) {
+        .nav-links {
+            display: none;
+
+            &.open {
+                display: flex;
+            }
+        }
+
+        .burger {
+            display: flex;
+        }
+    }
+}

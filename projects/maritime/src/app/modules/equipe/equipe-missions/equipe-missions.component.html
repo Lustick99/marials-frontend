@@ -1,0 +1,12 @@
+<section class="missions" [@staggeredList]>
+    <div class="container">
+        <h2>Nos Missions</h2>
+        <div class="missions-grid">
+            <div class="mission-card" *ngFor="let mission of missions" [@fadeSlide]>
+                <img [src]="mission.icone" [alt]="mission.titre">
+                <h3>{{ mission.titre }}</h3>
+                <p>{{ mission.description }}</p>
+            </div>
+        </div>
+    </div>
+</section>

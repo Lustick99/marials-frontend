@@ -1,0 +1,9 @@
+<section class="services-process">
+    <h2 class="section-title">Notre Processus</h2>
+    <div class="steps" @staggeredList>
+        <div class="step"
+            *ngFor="let step of ['Analyse des besoins', 'Proposition sur-mesure', 'Validation & planification', 'Exécution & suivi', 'Livraison finale']">
+            <div class="step-number">{{ step }}</div>
+        </div>
+    </div>
+</section>

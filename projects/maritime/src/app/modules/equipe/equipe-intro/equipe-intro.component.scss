@@ -1,0 +1,35 @@
+.equipe-intro {
+    padding: 2rem 2rem 4rem;
+    background: linear-gradient(180deg, #a2d9ff, #f0f8ff);
+    text-align: center;
+
+    .container {
+        max-width: 900px;
+        margin: 0 auto;
+
+        h2 {
+            font-size: 2.5rem;
+            font-weight: 700;
+            margin-bottom: 1rem;
+            color: #002244;
+            position: relative;
+
+            &::after {
+                content: '';
+                width: 60px;
+                height: 4px;
+                background-color: #0050ff;
+                display: block;
+                margin: 0.5rem auto 0;
+                border-radius: 2px;
+            }
+        }
+
+        .lead {
+            font-size: 1.25rem;
+            color: #333;
+            line-height: 1.8;
+            margin-top: 1rem;
+        }
+    }
+}

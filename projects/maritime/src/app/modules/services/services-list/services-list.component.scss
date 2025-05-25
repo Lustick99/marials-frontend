@@ -1,0 +1,57 @@
+.services-liste {
+    background: #fff;
+    padding: 4rem 1rem;
+
+    .container {
+        max-width: 1200px;
+        margin: 0 auto;
+        text-align: center;
+
+        .section-title {
+            font-size: 2.5rem;
+            margin-bottom: 2rem;
+            color: #003d66;
+        }
+
+        .cards {
+            display: flex;
+            flex-wrap: wrap;
+            gap: 2rem;
+            justify-content: center;
+
+            .card {
+                background-color: rgba(0, 200, 255, 0.1); // couleur semi-transparente
+                backdrop-filter: blur(10px); // effet de flou
+                -webkit-backdrop-filter: blur(10px); // pour Safari
+                border-radius: 1rem;
+                padding: 2rem;
+                box-shadow: 1px 10px 20px rgba(0, 0, 0, 0.05);
+                transition: transform 0.3s ease;
+                flex: 1 1 250px;
+                max-width: 250px;
+
+                .icon {
+                    font-size: 2.5rem;
+                    margin-bottom: 1rem;
+                }
+
+                h3 {
+                    font-size: 1.4rem;
+                    margin-bottom: 0.5rem;
+                    color: #003d66;
+                }
+
+                p {
+                    font-size: 1rem;
+                    color: #555;
+                }
+
+                &:hover {
+                    transform: translateY(-5px);
+                    box-shadow: 1px 15px 30px rgba(0, 0, 0, 0.1);
+                    background-color: rgba(0, 200, 255, 0.2); // couleur semi-transparente plus foncée
+                }
+            }
+        }
+    }
+}

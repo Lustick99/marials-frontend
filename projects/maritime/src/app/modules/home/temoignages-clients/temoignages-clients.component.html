@@ -1,0 +1,11 @@
+<section class="testimonials-section" @fadeSlide>
+    <h2 class="testimonials-title">Témoignages de nos clients</h2>
+    <div class="testimonials-grid">
+        <div class="testimonial-card" *ngFor="let t of testimonials">
+            <p class="comment">“{{ t.comment }}”</p>
+            <div class="client-info">
+                <strong>{{ t.name }}</strong> <span>- {{ t.company }}</span>
+            </div>
+        </div>
+    </div>
+</section>

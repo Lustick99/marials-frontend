@@ -1,0 +1,12 @@
+<section class="services-avantages" @fadeSlide>
+    <div class="container">
+        <h2 class="section-title">Pourquoi choisir nos services&nbsp;?</h2>
+        <div class="grid">
+            <div class="avantage" *ngFor="let a of avantages">
+                <div class="icon">{{ a.icon }}</div>
+                <h3>{{ a.title }}</h3>
+                <p>{{ a.description }}</p>
+            </div>
+        </div>
+    </div>
+</section>

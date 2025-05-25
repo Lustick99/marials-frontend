@@ -1,0 +1,54 @@
+.missions {
+    padding: 4rem 1rem;
+    background-color: #f0f8ff;
+
+    .container {
+        max-width: 1200px;
+        margin: auto;
+        text-align: center;
+
+        h2 {
+            font-size: 2.5rem;
+            margin-bottom: 2rem;
+            color: #003366;
+            font-weight: 700;
+        }
+
+        .missions-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+            gap: 2rem;
+        }
+
+        .mission-card {
+            background: white;
+            padding: 2rem;
+            border-radius: 1rem;
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.05);
+            transition: transform 0.3s ease;
+
+            &:hover {
+                transform: translateY(-5px);
+            }
+
+            img {
+                width: 200px;
+                height: 200px;
+                border-radius: 100%;
+                object-fit: contain;
+                margin-bottom: 1rem;
+            }
+
+            h3 {
+                font-size: 1.3rem;
+                color: #00507d;
+                margin-bottom: 0.5rem;
+            }
+
+            p {
+                font-size: 0.95rem;
+                color: #333;
+            }
+        }
+    }
+}

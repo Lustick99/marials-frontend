@@ -1,0 +1,82 @@
+<section class="contact-form-section" @fadeSlide>
+    <div class="form-wrapper">
+        <!-- Message de confirmation -->
+        <div class="form-alert" *ngIf="submitSuccess !== null"
+            [ngClass]="{ 'success': submitSuccess, 'error': !submitSuccess }">
+            {{ submitMessage }}
+        </div>
+
+        <form [formGroup]="form" (ngSubmit)="onSubmit()">
+
+            <!-- Nom -->
+            <div class="form-group">
+                <label for="name">Nom</label>
+                <input id="name" formControlName="name" type="text" placeholder="Votre nom complet" [ngClass]="{
+            'ng-invalid': form.get('name')?.invalid && form.get('name')?.touched,
+            'ng-valid': form.get('name')?.valid && form.get('name')?.touched
+          }" />
+                <span class="validation-icon">
+                    <ng-container *ngIf="form.get('name')?.valid && form.get('name')?.touched">✔️</ng-container>
+                    <ng-container *ngIf="form.get('name')?.invalid && form.get('name')?.touched">❌</ng-container>
+                </span>
+                <small *ngIf="form.get('name')?.invalid && form.get('name')?.touched">Champ requis</small>
+            </div>
+
+            <!-- Email -->
+            <div class="form-group">
+                <label for="email">Email</label>
+                <input id="email" formControlName="email" type="email" placeholder="exemple@domaine.com" [ngClass]="{
+            'ng-invalid': form.get('email')?.invalid && form.get('email')?.touched,
+            'ng-valid': form.get('email')?.valid && form.get('email')?.touched
+          }" />
+                <span class="validation-icon">
+                    <ng-container *ngIf="form.get('email')?.valid && form.get('email')?.touched">✔️</ng-container>
+                    <ng-container *ngIf="form.get('email')?.invalid && form.get('email')?.touched">❌</ng-container>
+                </span>
+                <small *ngIf="form.get('email')?.invalid && form.get('email')?.touched">
+                    Adresse email invalide
+                </small>
+            </div>
+
+            <!-- Sujet -->
+            <div class="form-group">
+                <label for="subject">Sujet</label>
+                <input id="subject" formControlName="subject" type="text" placeholder="Sujet de votre message"
+                    [ngClass]="{
+            'ng-invalid': form.get('subject')?.invalid && form.get('subject')?.touched,
+            'ng-valid': form.get('subject')?.valid && form.get('subject')?.touched
+          }" />
+                <span class="validation-icon">
+                    <ng-container *ngIf="form.get('subject')?.valid && form.get('subject')?.touched">✔️</ng-container>
+                    <ng-container *ngIf="form.get('subject')?.invalid && form.get('subject')?.touched">❌</ng-container>
+                </span>
+                <small *ngIf="form.get('subject')?.invalid && form.get('subject')?.touched">Champ requis</small>
+            </div>
+
+            <!-- Message -->
+            <div class="form-group">
+                <label for="message">Message</label>
+                <textarea id="message" formControlName="message" rows="5" placeholder="Écrivez votre message ici..."
+                    [ngClass]="{
+            'ng-invalid': form.get('message')?.invalid && form.get('message')?.touched,
+            'ng-valid': form.get('message')?.valid && form.get('message')?.touched
+          }"></textarea>
+                <span class="validation-icon">
+                    <ng-container *ngIf="form.get('message')?.valid && form.get('message')?.touched">✔️</ng-container>
+                    <ng-container *ngIf="form.get('message')?.invalid && form.get('message')?.touched">❌</ng-container>
+                </span>
+                <small *ngIf="form.get('message')?.invalid && form.get('message')?.touched">
+                    Le message doit contenir au moins 10 caractères
+                </small>
+            </div>
+
+            <!-- Bouton -->
+            <button type="submit" class="submit-btn" [disabled]="form.invalid || isLoading">
+                <ng-container *ngIf="!isLoading">Envoyer</ng-container>
+                <ng-container *ngIf="isLoading">
+                    <span class="spinner"></span> Envoi...
+                </ng-container>
+            </button>
+        </form>
+    </div>
+</section>

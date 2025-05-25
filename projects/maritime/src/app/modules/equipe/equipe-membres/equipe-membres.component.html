@@ -1,0 +1,13 @@
+<section class="equipe-membres" [@staggeredList]>
+    <div class="container">
+        <h2>Notre Équipe</h2>
+        <div class="membres-grid">
+            <div class="membre-card" *ngFor="let membre of membres">
+                <img [src]="membre.image" [alt]="membre.nom">
+                <h3>{{ membre.nom }}</h3>
+                <p class="poste">{{ membre.poste }}</p>
+                <p class="bio">{{ membre.bio }}</p>
+            </div>
+        </div>
+    </div>
+</section>

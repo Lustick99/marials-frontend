@@ -1,0 +1,40 @@
+:host {
+    display: block;
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 2rem;
+    background: #fff;
+}
+
+.galerie-grid {
+    column-count: 3;
+    column-gap: 1.5rem;
+
+    @media (max-width: 1024px) {
+        column-count: 2;
+    }
+
+    @media (max-width: 600px) {
+        column-count: 1;
+    }
+}
+
+.grid-item {
+    break-inside: avoid;
+    margin-bottom: 1.5rem;
+    border-radius: 12px;
+    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.1);
+    overflow: hidden;
+    transition: transform 0.3s ease;
+
+    &:hover {
+        transform: scale(1.02);
+    }
+
+    img {
+        width: 100%;
+        display: block;
+        border-radius: 12px;
+        object-fit: cover;
+    }
+}

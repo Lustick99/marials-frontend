@@ -1,0 +1,109 @@
+.infos-section {
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 4rem 1rem;
+    text-align: center;
+
+    .section-title {
+        font-size: 2rem;
+        margin-bottom: 2.5rem;
+        color: #003d66;
+    }
+
+    .infos-grid {
+        display: flex;
+        flex-wrap: wrap;
+        justify-content: center;
+        gap: 2rem;
+    }
+
+    .info-card {
+        background: rgba(255, 255, 255, 0.85);
+        backdrop-filter: blur(10px);
+        padding: 2rem;
+        border-radius: 1rem;
+        display: flex;
+        align-items: center;
+        flex-direction: row;
+        flex: 1 1 300px;
+        max-width: 350px;
+        gap: 1.2rem;
+        transition: transform 0.3s ease, background 0.3s ease, color 0.3s ease;
+        text-align: left;
+
+        &:hover {
+            transform: scale(1.1);
+            background: #005a99;
+            color: white;
+
+            lucide-icon {
+                color: white;
+            }
+
+            .details h3 {
+                color: #e0f7fa;
+            }
+
+            .details p {
+                color: #b2ebf2;
+            }
+        }
+
+        lucide-icon {
+            color: #005a99;
+            flex-shrink: 0;
+        }
+
+        .details {
+            h3 {
+                font-size: 1.2rem;
+                margin-bottom: 0.3rem;
+                color: #003d66;
+            }
+
+            p {
+                margin: 0;
+                font-size: 1rem;
+                color: #333;
+            }
+        }
+    }
+}
+
+@media (max-width: 992px) {
+    .infos-section {
+        .infos-grid {
+            flex-wrap: wrap;
+        }
+
+        .info-card {
+            flex: 1 1 45%;
+            max-width: 100%;
+        }
+    }
+}
+
+@media (max-width: 600px) {
+    .infos-section {
+        .infos-grid {
+            flex-direction: column;
+            align-items: center;
+        }
+
+        .info-card {
+            flex: 1 1 100%;
+            max-width: 100%;
+            flex-direction: column;
+            align-items: center;
+            text-align: center;
+
+            .details {
+
+                h3,
+                p {
+                    text-align: center;
+                }
+            }
+        }
+    }
+}

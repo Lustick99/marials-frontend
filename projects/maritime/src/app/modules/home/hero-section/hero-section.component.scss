@@ -1,0 +1,140 @@
+.hero {
+    height: 100vh;
+    background-image: url('/assets/images/maritime.jpg'); // Mets ici ton image
+    background-size: cover;
+    background-position: center;
+    position: relative;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+    .logo {
+        position: relative;
+        z-index: 10;
+        display: inline-block;
+
+        img {
+            max-height: 250px;
+            transition: transform 0.3s ease;
+
+            // &:hover {
+            //     transform: scale(1.01);
+            // }
+        }
+
+        // Effet de halo flou dégradé
+        &::before {
+            content: '';
+            position: absolute;
+            top: 50%;
+            left: 50%;
+            transform: translate(-50%, -50%);
+            width: 350px;
+            height: 350px;
+            border-radius: 50%;
+            background: radial-gradient(circle,
+                    rgba(255, 255, 255, 1) 0%,
+                    rgba(255, 255, 255, 0.9) 40%,
+                    transparent 70%);
+            filter: blur(40px);
+            pointer-events: none;
+            z-index: -1;
+            animation: pulse-blur 4s infinite ease-in-out;
+
+
+            @keyframes pulse-blur {
+
+                0%,
+                100% {
+                    transform: translate(-50%, -50%) scale(1);
+                    opacity: 1;
+                }
+
+                50% {
+                    transform: translate(-50%, -50%) scale(1.1);
+                    opacity: 0.7;
+                }
+            }
+
+        }
+
+        &:hover {
+            border: solid 1px #333;
+            border-radius: 100%;
+            box-shadow: #000000 3px 4px 17px 0px;
+            width: 300px;
+            height: 300px;
+            background-color: rgb(255 221 14);
+
+            img {
+                margin: 0 auto;
+                padding: 10%;
+                transform: scale(0.95);
+            }
+        }
+
+        // &:hover ::before {
+        //     animation: halo 1.5s infinite;
+        //     width: 300px;
+        //     height: 300px;
+        //     border-radius: 50%;
+        //     background: #fdfdfd48;
+        // }
+    }
+
+    .overlay {
+        position: absolute;
+        inset: 0;
+        background: linear-gradient(rgba(0, 21, 40, 0.8),
+                rgba(0, 51, 102, 0.6));
+        display: flex;
+        align-items: center;
+        justify-content: center;
+    }
+
+    .content {
+        text-align: center;
+        color: white;
+        padding: 2rem;
+
+        h1 {
+            font-size: 3rem;
+            background: linear-gradient(90deg, #00d4ff, #0073ff);
+            -webkit-background-clip: text;
+            background-clip: text;
+            -webkit-text-fill-color: transparent;
+            animation: gradient-move 5s infinite linear;
+        }
+
+        p {
+            margin-top: 1rem;
+            font-size: 1.5rem;
+        }
+
+        button {
+            margin-top: 2rem;
+            padding: 1rem 2rem;
+            font-size: 1rem;
+            border: none;
+            background: #0073ff;
+            color: white;
+            border-radius: 10px;
+            transition: all 0.3s ease;
+
+            &:hover {
+                background: #00d4ff;
+                transform: scale(1.05);
+            }
+        }
+    }
+}
+
+@keyframes gradient-move {
+    0% {
+        background-position: 0%
+    }
+
+    100% {
+        background-position: 100%
+    }
+}

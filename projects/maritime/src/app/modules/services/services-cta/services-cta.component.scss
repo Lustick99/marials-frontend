@@ -1,0 +1,42 @@
+.services-cta {
+    background: linear-gradient(135deg, #0077b6, #0096c7);
+    color: white;
+    padding: 4rem 1rem;
+    text-align: center;
+
+    .cta-container {
+        max-width: 900px;
+        margin: auto;
+
+        h2 {
+            font-size: 2rem;
+            margin-bottom: 1rem;
+        }
+
+        p {
+            font-size: 1.1rem;
+            margin-bottom: 2rem;
+            color: #e0f7ff;
+        }
+
+        .cta-btn {
+            display: inline-block;
+            background-color: white;
+            color: #0077b6;
+            font-weight: 600;
+            padding: 0.8rem 2rem;
+            border-radius: 30px;
+            text-decoration: none;
+            transition: background-color 0.3s ease;
+
+            &:hover {
+                background-color: #0077b6;
+                color: white;
+                border: #e0f7ff 1px solid;
+                box-shadow: 1px 4px 15px rgba(0, 119, 182, 0.3);
+                transform: scale(1.1);
+                text-transform: uppercase;
+            }
+        }
+    }
+}
